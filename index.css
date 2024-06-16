@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(26, 133, 168);
+  }
+
+  header {
+    background-color: rgb(6, 44, 56);
+    height: 300px;
+    width: 700px;
+  }
+
+  h1 {
+    font-size: 70;
+    text-align: center;
+  }
