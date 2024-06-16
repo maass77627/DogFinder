@@ -12,3 +12,10 @@ body {
     font-size: 70;
     text-align: center;
   }
+
+  #dog-container {
+
+    height: 200px;
+    width: 300px;
+
+  }
