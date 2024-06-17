@@ -1,0 +1,19 @@
+{
+    "dogs": [
+        {
+            "id": 1, 
+            "breed": "beagle",
+            "like": true,
+            "imageURL": ""
+        }, 
+        {
+            "id": 2,
+            "breed": "snauzer",
+            "like": false,
+            "imageURL": ""
+        }
+
+    
+
+]
+}
