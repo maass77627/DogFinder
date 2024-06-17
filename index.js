@@ -48,6 +48,8 @@ fetch('https://dog.ceo/api/breeds/image/random')
 function likedDogs(e) {
     console.log(e)
     console.log(e.target.parentNode.childNodes[1].src)
+    let h1 = document.createElement("h1")
+    h1.innerHTML = "Saved Pets"
     let dog = e.target.parentNode.childNodes[1].src
     let image = document.createElement("img")
     image.id = "dog-image"
