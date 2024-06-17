@@ -45,7 +45,7 @@ fetch('https://dog.ceo/api/breeds/image/random')
 }
 
 function likedDogs(e) {
-    console.log(e)
+    console.log(e.target.parentNpde)
 }
 
 
