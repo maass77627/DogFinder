@@ -38,6 +38,20 @@ body {
   
   } 
 
+  #liked-dogs {
+    background-color: rgb(9, 75, 37);
+    
+  /* margin-right: auto; */
+    /* margin-left: 525px; */
+    height: 400px;
+    width: 400px;
+    /* border-style: double;
+   border-color: darkslategray; */
+   border-radius: 25px;
+
+
+  }
+
   button {
     display: block;
   margin-left: auto;

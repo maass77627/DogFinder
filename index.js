@@ -2,11 +2,12 @@ document.addEventListener("DOMContentLoaded", () => {
 console.log("dom loaded")
 
 
-
-
 fetch('https://dog.ceo/api/breeds/image/random')
 .then((response) => response.json())
 .then((json) => createDog(json))
+
+const div2 = document.createElement("div")
+div2.id = "liked-dogs"
 
 const div = document.createElement("div")
 div.id = "dog-container"
@@ -45,7 +46,17 @@ fetch('https://dog.ceo/api/breeds/image/random')
 }
 
 function likedDogs(e) {
-    console.log(e.target.parentNpde)
+    console.log(e)
+    console.log(e.target.parentNode.childNodes[1].src)
+    let dog = e.target.parentNode.childNodes[1].src
+    let image = document.createElement("img")
+    image.id = "dog-image"
+    image.src = dog
+    let body = document.querySelector("body")
+
+    div2.appendChild(image)
+    body.appendChild(div2)
+    
 }
 
 
