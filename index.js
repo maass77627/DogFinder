@@ -6,8 +6,8 @@ fetch('https://dog.ceo/api/breeds/image/random')
 .then((response) => response.json())
 .then((json) => createDog(json))
 
-const div2 = document.createElement("div")
-div2.id = "liked-dogs"
+// const div2 = document.createElement("div")
+// div2.id = "liked-dogs"
 
 const div = document.createElement("div")
 div.id = "dog-container"
@@ -46,18 +46,14 @@ fetch('https://dog.ceo/api/breeds/image/random')
 .then((json) => createDog(json))
 }
 
+const div2 = document.createElement("div")
+    div2.id = "liked-dogs"
 function likedDogs(e) {
-    console.log(e)
-    console.log(e.target)
-    console.log(e.target.parentNode)
-    console.log(e.target.parentNode.childNodes)
-    console.log(e.target.parentNode.childNodes[2])
-    console.log(e.target.parentNode.childNodes[2].src)
-    // let h1 = document.createElement("h1")
-    // h1.innerHTML = "Saved Pets"
+    // let div2 = document.createElement("div")
+    // div2.id = "liked-dogs"
     let dog = e.target.parentNode.childNodes[1].src
     let image = document.createElement("img")
-    image.id = "dog-image"
+    image.id = "liked-dog-image"
     image.src = dog
     let body = document.querySelector("body")
 
