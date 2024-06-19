@@ -11,19 +11,7 @@ form.addEventListener("submit", (e) => {
 e.preventDefault()
 dogFilter(e)})
 
-        // let form = document.createElement("form")
-        // form.id = "form"
-        //  let input = document.createElement("input")
-        //     input.name = "breed"
-        //     input.id = "breed"
-        // let button = document.createElement("button")
-        // button.addEventListener("submit", (e) => {
-        //     e.preventDefault()
-        //     dogFilter(e)
-        // })
-        // button.innerHTML = "submit"
-        // form.appendChild(input)
-        // form.appendChild(button)
+       
         formdiv.appendChild(form)
         body.appendChild(formdiv)
 
@@ -85,9 +73,20 @@ function likedDogs(e) {
         let breed = e.target.childNodes[4].value
         fetch(`https://dog.ceo/api/breed/${breed}/images/random`)
         .then((response) => response.json())
-        .then((json) => console.log(json))
+        .then((json) => breeds(json))
     }
 
+    function breeds(json) {
+        console.log(div.childNodes[1].src)
+        let remo = div.childNodes[1]
+        
+       
+        let breed = json.message
+        remo.src = breed
+        // div.appendChild(image)
+       // div.appendChild(remo)
+
+    }
 
 
 })
