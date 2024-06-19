@@ -81,7 +81,11 @@ function likedDogs(e) {
     }
 
     function dogFilter(e) {
-        console.log(e)
+        console.log(e.target.childNodes[4].value)
+        let breed = e.target.childNodes[4].value
+        fetch(`https://dog.ceo/api/breed/${breed}/images/random`)
+        .then((response) => response.json())
+        .then((json) => console.log(json))
     }
 
 
