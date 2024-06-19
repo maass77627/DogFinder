@@ -1,25 +1,43 @@
 document.addEventListener("DOMContentLoaded", () => {
 console.log("dom loaded")
 
+const body = document.querySelector("body")
+const div = document.createElement("div")
+div.id = "dog-container"
+const formdiv = document.createElement("div")
+formdiv.id = "form-div"
+let form = document.getElementById("form")
+form.addEventListener("submit", (e) => {
+e.preventDefault()
+dogFilter(e)})
+
+        // let form = document.createElement("form")
+        // form.id = "form"
+        //  let input = document.createElement("input")
+        //     input.name = "breed"
+        //     input.id = "breed"
+        // let button = document.createElement("button")
+        // button.addEventListener("submit", (e) => {
+        //     e.preventDefault()
+        //     dogFilter(e)
+        // })
+        // button.innerHTML = "submit"
+        // form.appendChild(input)
+        // form.appendChild(button)
+        formdiv.appendChild(form)
+        body.appendChild(formdiv)
 
 fetch('https://dog.ceo/api/breeds/image/random')
 .then((response) => response.json())
 .then((json) => createDog(json))
 
-// const div2 = document.createElement("div")
-// div2.id = "liked-dogs"
 
-const div = document.createElement("div")
-div.id = "dog-container"
+
 
 function createDog(dog) {
-    
-    console.log(dog)
-    let body = document.querySelector("body")
-    // let div = document.createElement("div")
-    // div.id = "dog-container"
+    //let body = document.querySelector("body")
     let h1 = document.createElement("h1")
-    h1.innerHTML = "Dog"
+    h1.innerHTML = "Dogs"
     let button = document.createElement("button")
     let buttontwo = document.createElement("button")
     buttontwo.innerHTML = "new dog"
@@ -34,33 +52,37 @@ function createDog(dog) {
     div.appendChild(button)
     div.appendChild(buttontwo)
     body.appendChild(div)
-
 }
 
 function getNewDog(e) {
-    //div.remove()
     div.innerHTML = ""
-
 fetch('https://dog.ceo/api/breeds/image/random')
 .then((response) => response.json())
 .then((json) => createDog(json))
 }
 
-const div2 = document.createElement("div")
+    const div2 = document.createElement("div")
     div2.id = "liked-dogs"
+    let h1 = document.createElement("h1")
+    h1.innerHTML = "Liked Dogs"
+    div2.appendChild(h1)
+
+
 function likedDogs(e) {
-    // let div2 = document.createElement("div")
-    // div2.id = "liked-dogs"
+
     let dog = e.target.parentNode.childNodes[1].src
     let image = document.createElement("img")
     image.id = "liked-dog-image"
     image.src = dog
-    let body = document.querySelector("body")
-
+    //let body = document.querySelector("body")
+   
     div2.appendChild(image)
     body.appendChild(div2)
-    
-}
+    }
+
+    function dogFilter(e) {
+        console.log(e)
+    }
 
 
 

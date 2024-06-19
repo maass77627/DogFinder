@@ -42,6 +42,7 @@ body {
   } 
 
   #liked-dog-image {
+    
      /* position: absolute;  */
      /* float: right;  */
     width: 100px;
@@ -53,19 +54,34 @@ body {
     /* position: right; */
     /* position: absolute;  */
     /* display: block; */
-  
+    padding: 20px;
   } 
 
   #liked-dogs {
+    
     background-color: rgb(9, 75, 37);
      position: fixed;  
     margin-left: 25px;
     margin-right: auto;
-    padding: 25px;
-    /* margin-left: 25px;  */
-    height: 200px;
-    width: 200px;
+    
+    height: 800px;
+    width: 300px;
    border-radius: 25px;
+   border-style: double;
+   border-color: darkslategray;
+  }
+
+  #form-div {
+    text-align: center;
+    background-color: rgb(1, 15, 44);
+     position: fixed; 
+     margin-left: 400px;
+     height: 100px;
+    width: 300px;
+   border-radius: 25px;
+   border-style: double;
+   border-color: darkslategray;
+
   }
 
   button {
