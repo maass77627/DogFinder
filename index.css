@@ -13,6 +13,9 @@ body {
   }
 
   h1 {
+    margin: auto;
+    width: 250px;
+    background-color: rgb(247, 182, 5);
     font-size: 70;
     text-align: center;
     font: helvetica;
@@ -23,7 +26,7 @@ body {
      position: fixed; 
      margin-top: 60px;
     margin-left: 25px;
-    height: 500px;
+    height: 400px;
     width: 400px;
     border-style: double;
    border-color: darkslategray;
@@ -42,16 +45,16 @@ body {
   } 
 
   #liked-dog-image {
-    
+    margin: auto;
      /* position: absolute;  */
      /* float: right;  */
-    width: 90px;
-    height: 70px;
-    margin: auto;
+    width: 100px;
+    height: 100px;
+    
     /* margin-left: 25; */
     
     border-radius: 25px;
-    padding: 20px;
+    /* padding: 20px; */
   } 
 
   #liked-dogs {
@@ -64,18 +67,28 @@ body {
     margin-right: auto;
     
     height: 300px;
-    width: 700px;
+    width: 725px;
    border-radius: 25px;
    border-style: double;
    border-color: darkslategray;
   }
 
   #likeddiv {
+     margin-left: 5px;
+
     float: right;
-    background-color: rgb(53, 82, 119);
+    background-color: rgb(104, 108, 114);
     border-radius: 25px;
     height: 150px;
     width: 100px;
+  }
+
+  .nothidden {
+    visibility: visible;
+  }
+
+  .hidden {
+    visibility: hidden;
   }
 
   #form-div {
@@ -89,6 +102,20 @@ body {
    border-style: double;
    border-color: darkslategray;
 
+  }
+
+  #comments {
+    float: under;
+  }
+
+  #commentform {
+    /* margin: auto;
+    margin-top: 700px;  */
+    /* float: right; */
+    /* margin: auto; */
+    background-color: lavender;
+    height: 50px;
+    width: 300px;
   }
 
   button {

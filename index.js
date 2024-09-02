@@ -23,6 +23,13 @@ dogFilter(e)})
 formdiv.appendChild(form)
 body.appendChild(formdiv)
 
+let formtwo = document.getElementById("commentform")
+formtwo.addEventListener("submit", (e) => {
+    e.preventDefault()
+    commentFormSubmit(e)})
+
+
+
 fetch('https://dog.ceo/api/breeds/image/random')
 .then((response) => response.json())
 .then((json) => createDog(json))
@@ -63,10 +70,13 @@ function getNewDog(e) {
 function likedDogs(e) {
     console.log(e.target.parentNode.childNodes)
     console.log(e.target.parentNode.childNodes[1].src)
-     let likeddiv = document.createElement("div")
-     likeddiv.id = "likeddiv"
+      let likeddiv = document.createElement("div")
+      likeddiv.id = "likeddiv"
     let dog = e.target.parentNode.childNodes[1].src
     let image = document.createElement("img")
+    let buttontwo = document.createElement("button")
+     buttontwo.innerText = "comment"
+    buttontwo.addEventListener("click", (e) => commentForm(e))
     let button = document.createElement("button")
     button.innerText = "delete"
     button.addEventListener('click', (e) => deleteDog(e))
@@ -75,6 +85,7 @@ function likedDogs(e) {
     //let body = document.querySelector("body")
    likeddiv.appendChild(button)
    likeddiv.appendChild(image)
+   likeddiv.appendChild(buttontwo)
     div2.appendChild(likeddiv)
     }
 
@@ -91,9 +102,41 @@ function likedDogs(e) {
         let remo = div.childNodes[1]
         let breed = json.message
         remo.src = breed
-        // div.appendChild(image)
-       // div.appendChild(remo)
 }
+
+    function commentForm(formtwo, e) {
+        // formtwo.class = "nothidden"
+        // div2.appendChild(formtwo)
+    console.log(e)
+    // formtwo.class = "nothidden"
+        // let formdiv = document.createElement("div")
+        // formdiv.id = "commentform"
+        // let form = document.createElement("form")
+        // form.addEventListener("submit", (e) =>{
+        //     e.preventDefault()
+        //      postComment(e)})
+        // let textarea = document.createElement("textarea")
+        // let button = document.createElement("button")
+        // button.innerText = "submit"
+        // form.appendChild(textarea)
+        // form.appendChild(button)
+        // formdiv.appendChild(form)
+        // div2.appendChild(formdiv)
+    }
+
+    function commentFormSubmit(e) {
+        console.log(e.target.comment.value)
+        let div = document.createElement("div")
+        div.id="comments"
+        let p = document.createElement("paragraph")
+        p.innerText = e.target.comment.value
+        div.appendChild(p)
+        div2.appendChild(div)
+    }
+
+    // function postComment(e) {
+    //     console.log(e.target)
+    // }
 
     function deleteDog(e) {
         console.log(e.target.parentNode)
