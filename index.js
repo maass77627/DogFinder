@@ -23,11 +23,7 @@ dogFilter(e)})
 formdiv.appendChild(form)
 body.appendChild(formdiv)
 
-let formtwo = document.getElementById("commentform")
-formtwo.addEventListener("submit", (e) => {
-    e.preventDefault()
-    commentFormSubmit(e)})
-    div2.appendChild(formtwo)
+
 
 
 
@@ -105,19 +101,44 @@ function likedDogs(e) {
         remo.src = breed
 }
 
-    function commentForm(formtwo, e) {
-       
-       
+    function commentForm(e) {
+        console.log(e.target.parentNode)
+        let div = e.target.parentNode
+        
+        // div.id = "formdiv"
+        commentform = document.createElement("form")
+        commentform.id = "formdiv"
+        input = document.createElement("input")
+        input.id = "input"
+        button = document.createElement("button")
+        button.innerText = "Submit"
+        commentform.appendChild(input)
+        commentform.addEventListener("submit", (e) => {
+            e.preventDefault()
+            console.log(e.target.input.value)
+            commentFormSubmit(e)
+           })
+           commentform.appendChild(button)
+       div.appendChild(commentform)
     }
 
     function commentFormSubmit(e) {
-        // console.log(e.target.comment.value)
-        let div = document.createElement("div")
-        div.id="comments"
+         console.log(e.target)
+        //  let form = e.target
+        //  form.remove()
+        
+        let div = e.target.parentNode
+        // let div = document.createElement("div")
+        // div.id="comments"
         let p = document.createElement("paragraph")
-        p.innerText = e.target.comment.value
+        p.innerText = e.target.input.value
+        let p2= document.createElement("paragraph")
+        p2.innerText = " "
+        div.appendChild(p2)
         div.appendChild(p)
-        div2.appendChild(div)
+        let form = e.target
+        form.remove()
+        // div2.appendChild(div)
     }
 
 

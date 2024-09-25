@@ -1,7 +1,8 @@
 body {
   font-family: 'Courier New', Courier, monospace;
     background-color: rgb(2, 90, 117);
-    background-image: url("https://th.bing.com/th/id/OIP.N4Abdu0S_WBdDsYgC2PAxwHaE7?w=273&h=181&c=7&r=0&o=5&pid=1.7");
+    background-image: url("https://th.bing.com/th/id/R.55cb9d5790f31b24a74a254ea8d8041f?rik=Qn6rfpByhvM5Yw&pid=ImgRaw&r=0");
+  /* background-image: url("https://thumbs.dreamstime.com/b/seamless-vector-repeat-pattern-pet-paws-cute-background-230891348.jpg") */
   }
 
   header {
@@ -19,6 +20,17 @@ body {
     font-size: 70;
     text-align: center;
     font: helvetica;
+  }
+
+  #input {
+    width: 100px;
+    length: 100px;
+
+  }
+
+  #formdiv {
+    width: 100px;
+    length: 100px;
   }
 
   #dog-container {
@@ -60,7 +72,7 @@ body {
     margin-right: auto;
     
     height: 300px;
-    width: 725px;
+    width: 735px;
    border-radius: 25px;
    border-style: double;
    border-color: darkslategray;
