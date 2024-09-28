@@ -127,10 +127,10 @@ function likedDogs(e) {
          if (commentform) {
             commentform.remove()
          }
-        console.log(e.target.parentNode.childNodes)
+        // console.log(e.target.parentNode.childNodes)
         //  if (e.target.parentNode.childNodes.item(3)) {
         //      console.log("yes")} else {
-       console.log(e.target.parentNode)
+    //    console.log(e.target.parentNode)
         let div = e.target.parentNode
         
         // div.id = "formdiv"
@@ -161,7 +161,7 @@ function likedDogs(e) {
         //     } else {
 
        div.appendChild(commentform)
-       console.log(div)
+    //    console.log(div)
         // }
     }
 
