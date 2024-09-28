@@ -23,8 +23,24 @@ dogFilter(e)})
 formdiv.appendChild(form)
 body.appendChild(formdiv)
 
+//
 
+commentform = document.createElement("form")
+        commentform.id = "comformdiv"
+        input = document.createElement("input")
+        input.id = "input"
+        button = document.createElement("button")
+        button.innerText = "Submit"
+        commentform.appendChild(input)
+        commentform.addEventListener("submit", (e) => {
+            e.preventDefault()
+            console.log(e.target.input.value)
+            commentFormSubmit(e)
+           })
+           commentform.appendChild(button)
+//
 
+let count = 0
 
 
 fetch('https://dog.ceo/api/breeds/image/random')
@@ -66,6 +82,7 @@ function getNewDog(e) {
 
 
 function likedDogs(e) {
+    if (count < 7) {
     // console.log(e.target.parentNode.childNodes)
     // console.log(e.target.parentNode.childNodes[1].src)
     let likeddiv = document.createElement("div")
@@ -84,7 +101,12 @@ function likedDogs(e) {
     likeddiv.appendChild(image)
     likeddiv.appendChild(buttontwo)
     div2.appendChild(likeddiv)
+    count += 1
     }
+    // count += 1
+    console.log(count)
+    }
+
 
     function dogFilter(e) {
         console.log(e.target.childNodes[4].value)
@@ -102,30 +124,52 @@ function likedDogs(e) {
 }
 
     function commentForm(e) {
-        console.log(e.target.parentNode)
+         if (commentform) {
+            commentform.remove()
+         }
+        console.log(e.target.parentNode.childNodes)
+        //  if (e.target.parentNode.childNodes.item(3)) {
+        //      console.log("yes")} else {
+       console.log(e.target.parentNode)
         let div = e.target.parentNode
         
         // div.id = "formdiv"
-        commentform = document.createElement("form")
-        commentform.id = "formdiv"
-        input = document.createElement("input")
-        input.id = "input"
-        button = document.createElement("button")
-        button.innerText = "Submit"
-        commentform.appendChild(input)
-        commentform.addEventListener("submit", (e) => {
-            e.preventDefault()
-            console.log(e.target.input.value)
-            commentFormSubmit(e)
-           })
-           commentform.appendChild(button)
+
+
+
+        // commentform = document.createElement("form")
+        // commentform.id = "comformdiv"
+        // input = document.createElement("input")
+        // input.id = "input"
+        // button = document.createElement("button")
+        // button.innerText = "Submit"
+        // commentform.appendChild(input)
+        // commentform.addEventListener("submit", (e) => {
+        //     e.preventDefault()
+        //     console.log(e.target.input.value)
+        //     commentFormSubmit(e)
+        //    })
+        //    commentform.appendChild(button)
+
+
+        //    console.log(commentform)
+        //    console.log(div)
+        //    let answer = div.contains(commentform)
+        //    console.log(answer)
+        //    if (div.contains(commentform)) {
+        //      console.log("yes")
+        //     } else {
+
        div.appendChild(commentform)
+       console.log(div)
+        // }
     }
+
 
     function commentFormSubmit(e) {
          console.log(e.target)
-        //  let form = e.target
-        //  form.remove()
+        //   let form = e.target
+        //   form.remove()
         
         let div = e.target.parentNode
         // let div = document.createElement("div")
@@ -136,16 +180,20 @@ function likedDogs(e) {
         p2.innerText = " "
         div.appendChild(p2)
         div.appendChild(p)
-        let form = e.target
-        form.remove()
+         let form = e.target
+         
+         form.remove()
+         console.log(div)
         // div2.appendChild(div)
     }
 
 
     function deleteDog(e) {
+        count -= 1
         console.log(e.target.parentNode)
         let div = e.target.parentNode
         div.remove()
+        console.log(count)
     }
 
 
