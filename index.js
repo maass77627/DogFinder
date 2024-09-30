@@ -124,9 +124,9 @@ function likedDogs(e) {
 }
 
     function commentForm(e) {
-         if (commentform) {
-            commentform.remove()
-         }
+        //  if (commentform) {
+        //     commentform.remove()
+        //  }
         // console.log(e.target.parentNode.childNodes)
         //  if (e.target.parentNode.childNodes.item(3)) {
         //      console.log("yes")} else {

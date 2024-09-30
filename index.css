@@ -1,14 +1,17 @@
 body {
   font-family: 'Courier New', Courier, monospace;
     background-color: rgb(2, 90, 117);
-    background-image: url("https://th.bing.com/th/id/R.55cb9d5790f31b24a74a254ea8d8041f?rik=Qn6rfpByhvM5Yw&pid=ImgRaw&r=0");
-  /* background-image: url("https://thumbs.dreamstime.com/b/seamless-vector-repeat-pattern-pet-paws-cute-background-230891348.jpg") */
-  }
+      /* background-image: url("https://img.freepik.com/premium-photo/daisies-grass-wallpapers_919652-4665.jpg");  */
+      background-image: fill; 
+    /* background-image: url("https://th.bing.com/th/id/OIP.d7mcARi472YuKZDeDgasqgHaEo?rs=1&pid=ImgDetMain")   */
+  /* background-image: url("https://c8.alamy.com/comp/2FWMT1J/seamless-pet-paw-pattern-background-dog-or-cat-paw-wallpaper-illustration-footprint-2FWMT1J.jpg"); */
+  background-image: url("https://c8.alamy.com/comp/2FWMT1J/seamless-pet-paw-pattern-background-dog-or-cat-paw-wallpaper-illustration-footprint-2FWMT1J.jpg");
+}
 
   header {
     margin-left: 600px;
     margin-top: 150px;
-    background-color: rgb(173, 102, 173);
+    background-color: rgb(33, 67, 131);
     height: 300px;
     width: 700px;
   }
@@ -16,7 +19,7 @@ body {
   h1 {
     margin: auto;
     width: 250px;
-    background-color: rgb(247, 182, 5);
+    background-color: rgb(209, 196, 5);
     font-size: 70;
     text-align: center;
     font: helvetica;
@@ -34,7 +37,7 @@ body {
   }
 
   #dog-container {
-    background-color: rgb(189, 66, 18);
+    background-color: rgb(189, 156, 9);
      position: fixed; 
      margin-top: 60px;
     margin-left: 25px;
@@ -65,13 +68,13 @@ body {
   #liked-dogs {
     text-align: center;
     
-    background-color: rgb(209, 122, 22);
+    background-color: rgb(191, 190, 199);
      position: fixed;  
      margin-top: 150px;
     margin-left: 500px;
     margin-right: auto;
     
-    height: 300px;
+    height: 260px;
     width: 735px;
    border-radius: 25px;
    border-style: double;
@@ -82,7 +85,7 @@ body {
      margin-left: 5px;
 
     float: right;
-    background-color: rgb(104, 108, 114);
+    background-color: rgb(221, 218, 42);
     border-radius: 25px;
     height: 150px;
     width: 100px;
@@ -98,7 +101,7 @@ body {
 
   #form-div {
     text-align: center;
-    background-color: rgb(248, 164, 7);
+    background-color: rgb(182, 176, 164);
      position: fixed; 
      margin-left: 700px;
      height: 100px;
